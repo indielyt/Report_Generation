@@ -18,6 +18,7 @@ Photos
                 photo1.jpg
                 photo2.jpg
 
+## Running Scripts
 With folder structure in place, script "1_working_generate_structurelist.py" can be 
 run to generate the "Cross_reference.csv" file.  The hec-ras station will need to 
 be manually updated (currently) before running "2_Working_generate_pdfsV4.py".
