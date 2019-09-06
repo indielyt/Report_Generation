@@ -29,7 +29,7 @@ correctly)
 ```
 
 
-'''bash
+```bash
 ├───Photos
 │   ├───BLA
 │   │   └───Structure_Photos
@@ -46,8 +46,7 @@ correctly)
 │   │   └───XS_Photos
 │   │       ├───MAD_1000
 │   │       ├───MAD_10000
-'''
-
+```
 Photos
     FloodingSourceName
         Structure_Photos
