@@ -1,4 +1,4 @@
-# Report_Generation - Hydraulic photo appendix
+## Report_Generation - Hydraulic photo appendix
 Python tool for generating photo appendix for hydraulic modeling reports
 
 Workflow is based on submittal from surveyors, which can depend upon the company and
@@ -6,6 +6,7 @@ is not necessarily standardized.  A general folder structure that works looks li
 the following (each submission may require small changes to the scripts to run 
 correctly)
 
+## Underlying Data Folder Structure
 Photos
     FloodingSourceName
         Structure_Photos
@@ -27,6 +28,7 @@ also created.
 An environment.yml file provides the necessary python packages to successfully run
 this process.
         
-
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 
