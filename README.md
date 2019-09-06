@@ -8,28 +8,6 @@ correctly)
 
 ## Underlying Data Folder Structure
 ```bash
-├── app
-│   ├── css
-│   │   ├── **/*.css
-│   ├── favicon.ico
-│   ├── images
-│   ├── index.html
-│   ├── js
-│   │   ├── **/*.js
-│   └── partials/template
-├── dist (or build)
-├── node_modules
-├── bower_components (if using bower)
-├── test
-├── Gruntfile.js/gulpfile.js
-├── README.md
-├── package.json
-├── bower.json (if using bower)
-└── .gitignore
-```
-
-
-```bash
 ├───Photos
 │   ├───BLA
 │   │   └───Structure_Photos
@@ -47,16 +25,7 @@ correctly)
 │   │       ├───MAD_1000
 │   │       ├───MAD_10000
 ```
-Photos
-    FloodingSourceName
-        Structure_Photos
-            FloodingSourceName_RiverStation
-                photo1.jpg
-                photo2.jpg
-        XS_Photos
-            FloodingSourceName_RiverStation
-                photo1.jpg
-                photo2.jpg
+
 
 ## Running Scripts
 With folder structure in place, script "1_working_generate_structurelist.py" can be 
