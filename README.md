@@ -8,7 +8,7 @@ correctly)
 
 ## Underlying Data Folder Structure
 
-'''bash
+'''
 ├───Photos
 │   ├───BLA
 │   │   └───Structure_Photos
