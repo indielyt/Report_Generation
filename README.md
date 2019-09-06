@@ -1,4 +1,4 @@
-# Report_Generation
+# Report_Generation - Hydraulic photo appendix
 Python tool for generating photo appendix for hydraulic modeling reports
 
 Workflow is based on submittal from surveyors, which can depend upon the company and
