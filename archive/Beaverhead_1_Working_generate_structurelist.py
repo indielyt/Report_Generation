@@ -15,8 +15,8 @@ import os
 
 
 # define directory, output path, and global variable 'structures'
-photo_path = r"C:\Users\Daniel.Aragon\Documents\_Aragon_Backup_Files\02_Water_Resources\ThreeForks\photos"
-out_csv = r"C:\Users\Daniel.Aragon\Documents\_Aragon_Backup_Files\02_Water_Resources\ThreeForks\Cross_reference.csv"
+path = r'\\lakefs1\Projects\169207_MT_ThreeForks_Madison_Jefferson\18-08-0001S_Madison\Working\Survey\SurveySubmittal_MMI_20190118\Photos\MAD\Structure_Photos'
+outpath = r'C:\Users\Daniel.Aragon\Downloads\Report_Generation\Cross_reference.csv'
 structures = pd.DataFrame(columns = ['flooding_source','surveyor_xs'])
 
 # Function for recursively finding images in the directory
@@ -46,8 +46,11 @@ def get_directories(current_directory, directory_exclusion=['XS_Photos']):
             path_list = filepath.split('\\')
             surveyor_xs = path_list[-1]
             flooding_source = path_list[-3] 
-            print(f'path_list={path_list}. surveyor_xs={surveyor_xs}. flooding_source={flooding_source}')
             
+            # Handle one exception in folder structure with Beaverhead River
+            if False:
+                if flooding_source == 'Structure_Photos':
+                    flooding_source = path_list[-4]
 
             # Write to temporary data frame
             temp_df = pd.DataFrame([[flooding_source, surveyor_xs]], columns = ['flooding_source','surveyor_xs'])
@@ -68,13 +71,13 @@ def get_directories(current_directory, directory_exclusion=['XS_Photos']):
 
 
 # Call Cross Reference List function
-CrossReference_DataFrame = get_directories(photo_path)
+CrossReference_List = get_directories(path)
 # Add field for 'hec-ras xs' 
-CrossReference_DataFrame['hec-ras_xs']="_"
-print (CrossReference_DataFrame.head())
+CrossReference_List['hec-ras_xs']="_"
+print (CrossReference_List.head())
 
 # Generate csv from dataframe
-CrossReference_DataFrame.to_csv(out_csv, sep=',')
+CrossReference_List.to_csv(outpath, sep=',')
 
 
 

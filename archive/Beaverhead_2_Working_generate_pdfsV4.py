@@ -191,7 +191,7 @@ def merge_pdfs_in_directory(folder):
     from PyPDF2 import PdfFileReader, PdfFileMerger
 
     # Change this to 'n' if don't want to delete originals
-    delete = 'y'
+    delete = 'n'
     
     # identify current directory
     current_directory = os.getcwd()

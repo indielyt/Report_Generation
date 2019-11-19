@@ -2,9 +2,8 @@
 Python tool for generating photo appendix for hydraulic modeling reports
 
 Workflow is based on submittal from surveyors, which can depend upon the company and
-is not necessarily standardized.  A general folder structure that works looks like
-the following (each submission may require small changes to the scripts to run 
-correctly)
+is not necessarily standardized.  Folder structure must match the example below.  It's
+recommended to copy photos to local  drive, recreating the folder structure below.
 
 ## Underlying Data Folder Structure
 ```bash
@@ -29,8 +28,11 @@ correctly)
 
 ## Running Scripts
 With folder structure in place, script "1_working_generate_structurelist.py" can be 
-run to generate the "Cross_reference.csv" file.  The hec-ras station will need to 
-be manually updated (currently) before running "2_Working_generate_pdfsV4.py".
+run to generate the "Cross_reference.csv" file.  Two fields will need to be updated 
+manually before running "2_Working_generate_pdfsV4.py" - (hec-ras xs and flooding_source_name).
+"hec-ras xs is the associated modeling cross section closest to the surveyor_pt.shp data.
+"flooding_source_name" is used for printing the river name on each pdf page.
+
 Script 2 will generate individual pdfs for individual folders found in the photos folder
 provided (user will need to update paths before running script).  A merged pdf is 
 also created.
